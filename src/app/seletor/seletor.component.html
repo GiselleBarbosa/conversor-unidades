@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-content></mat-card-content>
+  <div class="seletor">
+    <mat-form-field appearance="fill">
+      <mat-label>Selecione a medida</mat-label>
+      <mat-select>
+        <mat-select-trigger>
+        </mat-select-trigger>
+        <mat-option *ngFor="let tipo of tipos" [value]="tipos">{{ tipo }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+</mat-card>
