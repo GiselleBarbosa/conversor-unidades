@@ -17,6 +17,4 @@ export class SeletorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
 }
