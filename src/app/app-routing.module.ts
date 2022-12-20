@@ -5,10 +5,11 @@ import { SeletorComponent } from './seletor/seletor.component';
 
 // Rota
 const routes: Routes = [
-  {path: 'home', component: SeletorComponent }, // Seleciona como tela principal 
+  {path: 'Conversor', component: ConversorComponent }, // Seleciona como tela principal 
+  // {path: 'home', component: SeletorComponent }, // Seleciona como tela principal 
   {path: 'conversor/:de/:para', component: ConversorComponent }, // Rota do calculo
   {path: 'conversor', component: ConversorComponent },
-  {path: '', pathMatch: 'full', redirectTo: 'home'}, // Direciona qdo não encontra uma rota, encaminha para tela inicial
+  {path: '', pathMatch: 'full', redirectTo: 'Conversor'}, // Direciona qdo não encontra uma rota, encaminha para tela inicial
 
 ];
 

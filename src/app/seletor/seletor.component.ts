@@ -18,7 +18,7 @@ export class SeletorComponent implements OnInit {
   });
 
   // Var que recebe valor do input
-  tempInputDe: string = '';
+  tempInputDe: string = ''; 
   tempInputPara: string = '';
 
   ngOnInit(): void {

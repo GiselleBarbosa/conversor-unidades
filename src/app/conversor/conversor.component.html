@@ -1,18 +1,29 @@
-<!-- <mat-card class="col-12 d-flex justify-content-evenly mt-5">
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> Você selecionou {{ 'de' }} para {{ 'para' }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="example-full-width">
+            <mat-label>Digite o valor</mat-label>
+            <input matInput formControlName="tempInputDe" value=''>
+        </mat-form-field>
+    </mat-card-content>
+    </mat-card>
 
-    
-
-
-  </mat-card>
-
-
-  <div class="container text-center mt-3">
-    <button mat-raised-button color="primary">
-      Converter
+    <button mat-raised-button color="primary"
+    routerLink="/">
+      Voltar
     </button>
-  </div>
-  
-   -->
 
 
-   <h1>Quebrando a cabeça</h1>
+    <!-- <div class="bg-color">
+        <h3>A Medida a Ser Convertida: {{medida}}</h3>
+        <form [formGroup]="formularioMedida">
+          <mat-form-field appearance="fill" color="primary">
+              <input matInput formControlName="medidaInput" #medidaInput [value]="resultadoConv.valor">
+          </mat-form-field>
+          {{medida}}
+          <br>
+          <button mat-raised-button color="primary" (click)="resultadoConversao(+medidaInput.value)">Converter</button>
+        </form>
+    </div> -->
