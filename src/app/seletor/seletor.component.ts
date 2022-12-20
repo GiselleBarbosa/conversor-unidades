@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators, RequiredValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-seletor',
@@ -8,15 +8,23 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class SeletorComponent implements OnInit {
 
-  // criar as variaveis (3)
-  temperaturas = ['Celsius','Kelvin', 'Fahrenheit']
+  // Array de Tipos de Temperaturas que será mostrado no select utilizando ngFor 
+  temperaturas = ['Celsius', 'Kelvin', 'Fahrenheit'];
 
   temperaturaForm = new FormGroup({
-    temperaturaDe: new FormControl(''),
-    temperaturaPara: new FormControl(''),
-  })
+    temperaturaDe: new FormControl('', Validators.required),
+    temperaturaPara: new FormControl('', Validators.required),
+  });
+
+  temperaturaDeValue: string = '';
+  temperaturaParaValue: string = '';
 
   ngOnInit(): void {
+  }
+
+  clicou(){
+    console.log(this.temperaturaDeValue);
+    console.log(this.temperaturaParaValue);
   }
 
 }

@@ -1,25 +1,45 @@
-<!-- card-temperatura -->
-<form [formGroup]="temperaturaDe">
-  <mat-card class="col-12 text-center">
-    <mat-form-field appearance="fill" class="col-3 mt-4 mb-4 me-5">
+<mat-card class="col-12 d-flex justify-content-evenly mt-5">
+
+  <form [formGroup]="temperaturaForm">
+    <mat-form-field appearance="fill" class="col-12 mb-3">
       <mat-label>Converter De:</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+
+      <mat-select formControlName="temperaturaDe" 
+      [(ngModel)]="temperaturaDeValue">
+        <mat-option 
+        *ngFor="let temperatura of temperaturas" 
+        [value]="temperatura">{{ temperatura }}
         </mat-option>
       </mat-select>
-    </mat-form-field>
-</form>
 
-<form [formGroup]="temperaturaPara">
-  <mat-form-field appearance="fill" class="col-3">
-    <mat-label>Converter Para: </mat-label>
-    <mat-select>
-      <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</form>
+    </mat-form-field>
+  </form>
+
+  <form [formGroup]="temperaturaForm">
+    <mat-form-field appearance="fill" class="col-12 mb-3">
+      <mat-label>Converter Para: </mat-label>
+
+      <mat-select formControlName="temperaturaPara" 
+      [(ngModel)]="temperaturaParaValue">
+        <mat-option 
+        *ngFor="let temperatura of temperaturas" 
+        [value]="temperatura">{{ temperatura }}
+        </mat-option>
+      </mat-select>
+
+    </mat-form-field>
+  </form>
+ 
+
 </mat-card>
+<div class="container text-center mt-3">
+  <button mat-raised-button color="primary"
+  (click)="clicou()">
+    Converter
+  </button>
+</div>
+
+
 
 
 <!-- 

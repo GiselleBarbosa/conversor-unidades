@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SeletorComponent } from './seletor/seletor.component';
 import { AngularMaterialModule } from "./angular-material/angular-material.module";
 import { HeaderComponent } from './header/header.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    AngularMaterialModule
+    AngularMaterialModule, 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
