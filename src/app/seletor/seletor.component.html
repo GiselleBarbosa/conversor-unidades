@@ -1,28 +1,21 @@
-<mat-card class="container">
-  <div class="central">
-    <mat-form-field appearance="fill">
+<!-- card-temperatura -->
+<mat-card class="col-12 text-center">
+  <mat-form-field appearance="fill" class="col-3 mt-4 mb-4 me-5">
+    <mat-label>Converter De:</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-<!-- Dois formField -->
-      <mat-label>Selecione De </mat-label>
-      <mat-select>
-        <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
-        </mat-option>
-      </mat-select> 
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-
-      <mat-label>Selecione Para </mat-label>
-      <mat-select>
-        <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
-        </mat-option>
-      </mat-select> 
-    </mat-form-field>
-
-  </div>
-
+  <mat-form-field appearance="fill" class="col-3">
+    <mat-label>Converter Para: </mat-label>
+    <mat-select>
+      <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 </mat-card>
-
 
 <!-- 
   - encapsular para dentro da tag form,
