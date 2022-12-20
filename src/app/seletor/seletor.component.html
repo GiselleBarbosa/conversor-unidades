@@ -1,36 +1,31 @@
+
 <mat-card class="col-12 d-flex justify-content-evenly mt-5">
 
+  <!-- Input Temperatura De -->
   <form [formGroup]="temperaturaForm">
     <mat-form-field appearance="fill" class="col-12 mb-3">
       <mat-label>Converter De:</mat-label>
-
-      <mat-select formControlName="temperaturaDe" 
-      [(ngModel)]="temperaturaDeValue">
-        <mat-option 
-        *ngFor="let temperatura of temperaturas" 
-        [value]="temperatura">{{ temperatura }}
-        </mat-option>
-      </mat-select>
-
+        <mat-select formControlName="formTempDe" [(ngModel)]="tempInputDe">
+          <mat-option 
+            *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+          </mat-option>
+        </mat-select>
     </mat-form-field>
   </form>
 
+  <!-- Input Temperatura Para -->
   <form [formGroup]="temperaturaForm">
     <mat-form-field appearance="fill" class="col-12 mb-3">
       <mat-label>Converter Para: </mat-label>
-
-      <mat-select formControlName="temperaturaPara" 
-      [(ngModel)]="temperaturaParaValue">
-        <mat-option 
-        *ngFor="let temperatura of temperaturas" 
-        [value]="temperatura">{{ temperatura }}
-        </mat-option>
-      </mat-select>
-
+        <mat-select formControlName="formTempPara" [(ngModel)]="tempInputPara">
+          <mat-option 
+            *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+          </mat-option>
+        </mat-select>
     </mat-form-field>
   </form>
- 
 
+  <!--  Botão -->
 </mat-card>
 <div class="container text-center mt-3">
   <button mat-raised-button color="primary"
@@ -42,11 +37,8 @@
 
 
 
-<!-- 
-  - encapsular para dentro da tag form,
-  - de e para dentro do formulario de temperatura,
-  - formGroup e formControl
-  - Nomear os campos para transferir camps do html 
-  - Criar os formGroup e formControl tambem no TS ara conectar eles 
+<!-- **** ANOTAÇOES ****
+  - Criar Rotas,
+  - Passar parametros recebidos dos Inputs 
 
 -->

@@ -9,12 +9,14 @@ import { SeletorComponent } from './seletor/seletor.component';
 import { AngularMaterialModule } from "./angular-material/angular-material.module";
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ConversorComponent } from './conversor/conversor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeletorComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConversorComponent
   ],
   imports: [
     BrowserModule,
