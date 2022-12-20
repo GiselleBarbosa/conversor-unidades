@@ -8,13 +8,13 @@ import { FormControl } from "@angular/forms";
 })
 export class SeletorComponent implements OnInit {
 
-  seletorTipo = new FormControl('');
-
-  tipos: string[] = ['Medida', 'Temperatura', 'Comprimento'];
-
-  constructor() { }
+  // criar as variaveis (3)
+  temperaturas = ['Celsius','Kelvin', 'Fahrenheit']
 
   ngOnInit(): void {
   }
 
 }
+
+
+

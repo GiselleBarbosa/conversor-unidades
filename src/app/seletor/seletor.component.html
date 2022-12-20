@@ -1,14 +1,34 @@
-<mat-card>
-  <mat-card-content></mat-card-content>
-  <div class="seletor">
+<mat-card class="container">
+  <div class="central">
     <mat-form-field appearance="fill">
-      <mat-label>Selecione a medida</mat-label>
+
+<!-- Dois formField -->
+      <mat-label>Selecione De </mat-label>
       <mat-select>
-        <mat-select-trigger>
-        </mat-select-trigger>
-        <mat-option *ngFor="let tipo of tipos" [value]="tipos">{{ tipo }}</mat-option>
-      </mat-select>
+        <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+        </mat-option>
+      </mat-select> 
     </mat-form-field>
+
+    <mat-form-field appearance="fill">
+
+      <mat-label>Selecione Para </mat-label>
+      <mat-select>
+        <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+        </mat-option>
+      </mat-select> 
+    </mat-form-field>
+
   </div>
 
 </mat-card>
+
+
+<!-- 
+  - encapsular para dentro da tag form,
+  - de e para dentro do formulario de temperatura,
+  - formGroup e formControl
+  - Nomear os campos para transferir camps do html 
+  - Criar os formGroup e formControl tambem no TS ara conectar eles 
+
+-->
