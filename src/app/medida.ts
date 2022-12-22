@@ -1,4 +1,4 @@
-export interface Medida{
-    tipo: string;
-    valor: number;
+export interface Medida {
+  tipo: string;
+  valor: number;
 }
