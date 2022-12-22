@@ -1,35 +1,29 @@
-
 <mat-card class="col-12 d-flex justify-content-evenly mt-5">
 
   <!-- Input Temperatura De -->
   <form [formGroup]="temperaturaForm">
     <mat-form-field appearance="fill" class="col-12 mb-3">
       <mat-label>Converter De:</mat-label>
-        <mat-select formControlName="formTempDe" [(ngModel)]="tempInputDe">
-          <mat-option 
-            *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
-          </mat-option>
-        </mat-select>
+      <mat-select formControlName="formTempDe" [(value)]="tempInputDe">
+        <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
-  </form>
 
-  <!-- Input Temperatura Para -->
-  <form [formGroup]="temperaturaForm">
+    <!-- Input Temperatura Para -->
     <mat-form-field appearance="fill" class="col-12 mb-3">
       <mat-label>Converter Para: </mat-label>
-        <mat-select formControlName="formTempPara" [(ngModel)]="tempInputPara">
-          <mat-option 
-            *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
-          </mat-option>
-        </mat-select>
+      <mat-select formControlName="formTempPara" [(value)]="tempInputPara">
+        <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">{{ temperatura }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
   </form>
-
-  <!--  Botão -->
 </mat-card>
+
+<!--  Botão Submit-->
 <div class="container text-center mt-3">
-  <button mat-raised-button color="primary"
-  (click)="clicou()">
+  <button mat-raised-button color="primary" type="submit" (click)="enviaParams()">
     Converter
   </button>
 </div>

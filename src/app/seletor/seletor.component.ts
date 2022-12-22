@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seletor',
@@ -17,16 +18,19 @@ export class SeletorComponent implements OnInit {
     formTempPara: new FormControl('', Validators.required),
   });
 
-  // Var que recebe valor do input
-  tempInputDe: string = ''; 
+  // Variavel que recebe o valor dos input vinda do [(value)]="tempInputDe" 
+  tempInputDe: string = '';
   tempInputPara: string = '';
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  clicou(){
+  enviaParams() {
     console.log(this.tempInputDe);
     console.log(this.tempInputPara);
+    this.router.navigate(['/conversor', this.tempInputDe, this.tempInputPara]);
   }
 
 }

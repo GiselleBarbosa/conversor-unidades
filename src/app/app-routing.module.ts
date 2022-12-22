@@ -1,16 +1,14 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConversorComponent } from './conversor/conversor.component';
 import { SeletorComponent } from './seletor/seletor.component';
 
 // Rota
 const routes: Routes = [
-  {path: 'Conversor', component: ConversorComponent }, // Seleciona como tela principal 
-  // {path: 'home', component: SeletorComponent }, // Seleciona como tela principal 
-  {path: 'conversor/:de/:para', component: ConversorComponent }, // Rota do calculo
-  {path: 'conversor', component: ConversorComponent },
-  {path: '', pathMatch: 'full', redirectTo: 'Conversor'}, // Direciona qdo não encontra uma rota, encaminha para tela inicial
-
+  { path: 'seletor', component: SeletorComponent },
+  { path: 'conversor', component: ConversorComponent },
+  { path: 'conversor/:de/:para', component: ConversorComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'seletor' }
 ];
 
 @NgModule({
