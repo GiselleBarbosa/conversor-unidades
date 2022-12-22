@@ -1,7 +1,7 @@
 <mat-card class="col-12 d-flex justify-content-evenly mt-5">
 
   <!-- Input Temperatura De -->
-  <form [formGroup]="temperaturaForm">
+  <form [formGroup]="temperaturaForm" (ngSubmit)="enviaParams()">
     <mat-form-field appearance="fill" class="col-12 mb-3">
       <mat-label>Converter De:</mat-label>
       <mat-select formControlName="formTempDe" [(value)]="tempInputDe">
@@ -18,15 +18,16 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
+    <!--  Botão Submit-->
+    <div class="container text-center mt-3">
+      <button mat-raised-button color="primary" type="submit">
+        Converter
+      </button>
+    </div>
   </form>
 </mat-card>
 
-<!--  Botão Submit-->
-<div class="container text-center mt-3">
-  <button mat-raised-button color="primary" type="submit" (click)="enviaParams()">
-    Converter
-  </button>
-</div>
+
 
 
 

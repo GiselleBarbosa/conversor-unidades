@@ -1,3 +1,4 @@
+import { ConversorComponent } from './conversor/conversor.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,13 +10,14 @@ import { SeletorComponent } from './seletor/seletor.component';
 import { AngularMaterialModule } from "./angular-material/angular-material.module";
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { ConversorComponent } from './conversor/conversor.component';
+import { RecebeParamsComponent } from './recebeParams/recebeParams.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeletorComponent,
     HeaderComponent,
+    RecebeParamsComponent, 
     ConversorComponent
   ],
   imports: [
@@ -23,7 +25,7 @@ import { ConversorComponent } from './conversor/conversor.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    AngularMaterialModule, 
+    AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule
   ],

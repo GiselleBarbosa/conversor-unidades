@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConversorComponent } from './conversor/conversor.component';
+import { ConversorComponent } from './recebeParams/recebeParams.component';
 import { SeletorComponent } from './seletor/seletor.component';
 
 // Rota

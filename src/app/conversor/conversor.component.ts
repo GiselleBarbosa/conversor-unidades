@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-conversor',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conversor.component.scss']
 })
 export class ConversorComponent implements OnInit {
-// receberá os parametros vindos do seletor e armanezara dentro de uma variavel 
+
+  formConversor = new FormGroup({
+    tempInput: new FormControl('', Validators.required),
+  });
+
   constructor() { }
 
   ngOnInit(): void {
