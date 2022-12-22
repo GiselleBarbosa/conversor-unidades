@@ -17,8 +17,9 @@ import { RecebeParamsComponent } from './recebeParams/recebeParams.component';
     AppComponent,
     SeletorComponent,
     HeaderComponent,
-    RecebeParamsComponent, 
-    ConversorComponent
+    ConversorComponent,
+    RecebeParamsComponent
+    
   ],
   imports: [
     BrowserModule,
